@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 // Constant
 import { appPath } from './app-path.const';
@@ -11,4 +12,11 @@ import { appPath } from './app-path.const';
 export class AppComponent {
   title = 'ECApplication';
   path = appPath;
+
+  constructor(private router: Router) { }
+
+  ngOnInit() {
+    console.log(this.router.config);
+  }
+
 }
